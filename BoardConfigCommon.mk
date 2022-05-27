@@ -159,9 +159,9 @@ TARGET_RECOVERY_DEVICE_MODULES += \
     vendor.display.config@1.0 \
     vendor.display.config@2.0
 ifeq ($(TARGET_IS_VAB),true)
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/recovery_AB.fstab
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/fstab/recovery_AB.fstab
 else
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/recovery.fstab
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/fstab/recovery.fstab
 endif
 
 # Use mke2fs to create ext4 images
