@@ -81,3 +81,8 @@ PRODUCT_SOONG_NAMESPACES += \
 #PRODUCT_EXTRA_RECOVERY_KEYS += \
 ## Reserved
 
+# Vendor blobs
+ifneq ($(wildcard vendor/xiaomi/sm8250-common/proprietary/),)
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/xiaomi/sm8250-common/proprietary/,$(TARGET_COPY_OUT_RECOVERY)/root/)
+endif
