@@ -53,6 +53,15 @@ PRODUCT_PACKAGES += \
     bootctrl.$(PRODUCT_PLATFORM).recovery
 endif # TARGET_IS_VAB
 
+# Debug
+PRODUCT_PACKAGES += \
+    crash_dump \
+    libprocinfo.recovery
+
+PRODUCT_COPY_FILES += \
+    $(OUT_DIR)/target/product/$(PRODUCT_RELEASE_NAME)/system/apex/com.android.runtime/bin/crash_dump32:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/crash_dump32 \
+    $(OUT_DIR)/target/product/$(PRODUCT_RELEASE_NAME)/system/apex/com.android.runtime/bin/crash_dump64:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/crash_dump64
+
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
