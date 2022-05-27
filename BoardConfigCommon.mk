@@ -256,3 +256,6 @@ endif
 #
 # end local build flags
 #
+
+# Extra
+-include vendor/extra/BoardConfigExtra.mk
