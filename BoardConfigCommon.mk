@@ -265,5 +265,7 @@ endif
 # end local build flags
 #
 
+include $(COMMON_PATH)/BoardConfigSHRP.mk
+
 # Extra
 -include vendor/extra/BoardConfigExtra.mk
