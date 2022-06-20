@@ -14,6 +14,7 @@
 /splash			emmc	/dev/block/bootdevice/by-name/splash								flags=display="Splash";backup=1;flashimg=1
 /cust			auto	/dev/block/bootdevice/by-name/cust								flags=display="Cust";wipeingui
 /cust_image		emmc	/dev/block/bootdevice/by-name/cust								flags=display="Cust";backup=1;flashimg=1
+/spunvm                 vfat    /dev/block/bootdevice/by-name/spunvm                                                            flags=display="Spunvm";mounttodecrypt;fsflags="rw,noatime,shortname=lower,uid=1000,gid=1000,dmask=007,fmask=007,context=u:object_r:vendor_spunvm_file:s0"
 
 # AVB partitions
 /dtbo			emmc	/dev/block/bootdevice/by-name/dtbo									flags=display="DTBO";backup=1;flashimg=1
@@ -21,7 +22,7 @@
 /vbmeta_system	emmc	/dev/block/bootdevice/by-name/vbmeta_system							flags=display="VBMeta System";backup=1;flashimg=1
 
 # Persistent Firmware & Properties
-/persist		ext4	/dev/block/bootdevice/by-name/persist 								flags=display="Persist";fsflags=ro
+/persist		ext4	/dev/block/bootdevice/by-name/persist 								flags=display="Persist";mounttodecrypt;fsflags=ro
 /persist_image	emmc	/dev/block/bootdevice/by-name/persist 								flags=display="Persist";backup=1
 
 # Modem partitions
