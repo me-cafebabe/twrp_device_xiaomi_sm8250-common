@@ -62,6 +62,13 @@ PRODUCT_PACKAGES += \
     qcom_decrypt \
     qcom_decrypt_fbe
 
+# Ramdisk
+ifeq ($(TARGET_IS_VAB),true)
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab/fstab_AB.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+else
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+endif
+
 # Recovery
 ifeq ($(TARGET_IS_VAB),true)
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab/twrp_AB.flags:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/twrp.flags
