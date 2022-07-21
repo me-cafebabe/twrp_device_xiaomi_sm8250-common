@@ -18,8 +18,11 @@
 
 # AVB partitions
 /dtbo			emmc	/dev/block/bootdevice/by-name/dtbo									flags=display="DTBO";backup=1;flashimg=1
-/vbmeta			emmc	/dev/block/bootdevice/by-name/vbmeta								flags=display="VBMeta";backup=1;flashimg=1
-/vbmeta_system	emmc	/dev/block/bootdevice/by-name/vbmeta_system							flags=display="VBMeta System";backup=1;flashimg=1
+/vbmeta			emmc	/dev/block/bootdevice/by-name/vbmeta									flags=display="VBMeta";backup=1;flashimg=1
+/vbmeta_system		emmc	/dev/block/bootdevice/by-name/vbmeta_system								flags=slotselect;display="VBMeta System";backup=1;flashimg=1
+/vbmeta_product		emmc	/dev/block/bootdevice/by-name/vbmeta_product								flags=slotselect;display="VBMeta Product";backup=1;flashimg=1
+/vbmeta_vendor		emmc	/dev/block/bootdevice/by-name/vbmeta_vendor								flags=slotselect;display="VBMeta Vendor";backup=1;flashimg=1
+/vbmeta_odm		emmc	/dev/block/bootdevice/by-name/vbmeta_odm								flags=slotselect;display="VBMeta ODM";backup=1;flashimg=1
 
 # Persistent Firmware & Properties
 /persist		ext4	/dev/block/bootdevice/by-name/persist 								flags=display="Persist";fsflags=ro
