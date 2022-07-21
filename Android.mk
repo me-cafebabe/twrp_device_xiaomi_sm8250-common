@@ -26,7 +26,7 @@
 LOCAL_PATH := $(call my-dir)
 
 MILITO_DEVICES := monet vangogh
-MIKONA_DEVICES := mikona_a umi elish
+MIKONA_DEVICES := mikona_a umi elish alioth
 OTHER_DEVICES := mobius
 
 ifeq ($(TARGET_DEVICE),$(filter $(TARGET_DEVICE),$(MILITO_DEVICES) $(MIKONA_DEVICES) $(OTHER_DEVICES)))
